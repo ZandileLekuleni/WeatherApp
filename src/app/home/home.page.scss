@@ -1,0 +1,140 @@
+
+#myVideo{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+ 
+  }
+
+  .video{
+    position: absolute;
+    color: black;
+    width:100%;
+  }
+  //     text-align: center;
+// }
+// div {
+//     border-style: outset;
+//     background-image: url('yoh.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     height: 1000px;
+//     background-color: wheat;
+// }
+// div.container {
+//     text-align: center;
+//     width: 1000px;
+//     text-align: center;
+//     padding-left: 20px;
+//     position: absolute;
+// }
+// h5 {
+//     padding-right: 20px;
+//     position: relative;
+//     color: whitesmoke;
+// }
+// h1 {
+//     text-align: center;
+//     color: whitesmoke;
+// }
+// h4 {
+//     text-align: center;
+//     padding-left: 0px;
+//     padding-right: 0px;
+//     color: whitesmoke;
+// }
+// h6 {
+//     text-align: center;
+//     color: whitesmoke;
+// }
+// img {
+//     height: 100px;
+//     width: 50%;
+// }
+// td {
+//     text-align: center;
+// }
+.weather {
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 0px 1px 10px 0px black;
+  overflow: hidden;
+}
+
+
+.weather .current .info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  flex-grow: 2;
+}
+
+.weather .current .info .city {
+  font-size: 38px;
+}
+
+.weather .current .info .temp {
+  font-size: 56px;
+}
+
+.weather .current .info .wind {
+  font-size: 15px;
+}
+
+.weather .current .info .main {
+  font-size: 15px;
+}
+
+.weather .current .icon {
+  text-align: center;
+  font-size: 64px;
+  flex-grow: 1;
+}
+
+.weather .future {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.weather .future .day {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+// .weather .future .day:hover {
+//     color: #fff;
+// }
+.weather .future .day h3 {
+  text-transform: uppercase;
+}
+
+.weather .future .day p {
+  font-size: 28px;
+  height: 200%;
+}
+
+.container {
+  text-align: center;
+
+}
+
+ion-title {
+  text-align: center;
+}
+
+ion-button {
+  transform: translateX(800%);
+  text-align: center;
+}
+ion-card{
+  text-align: center;
+  background-color: rgb(107, 43, 226);
+  text-shadow: aqua;
+  color: black;
+  
+}
+

@@ -1,0 +1,109 @@
+<body>
+        <ion-header translucent>
+            <ion-toolbar shape="round" color="tertiary">
+               
+
+                    <ion-title>
+                            Weather Map App 
+                          
+                        </ion-title>
+
+
+
+
+
+            </ion-toolbar>
+        </ion-header>
+    
+        <br>
+        <ion-content>
+
+                 <video autoplay muted loop id="myVideo">
+                        <source src="/assets/Clouds background video.mp4" type="video/mp4"></video>
+     
+
+     
+    <div class="video">
+            <div class="container">
+                    
+
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <div class="weather">
+                            <div class="current">
+                                
+                                    <ion-searchbar shape="round" color="tertiary" showCancelButton="focus" [(ngModel)]="city" (click)="searchData()" ></ion-searchbar>
+                                    <!-- <ion-button shape="round" color="primary" (click)="searchData()">SEARCH</ion-button> -->
+                                <ion-card>
+                                                <div class="info">
+                                                <!-- <div>&nbsp;</div> -->
+                                                <h5>{{date | date: 'EEEE'}}&nbsp;{{date | date: 'dd' }}/{{date | date: 'MM' }}/{{date | date: 'yyyy' }}&nbsp;{{date |date: 'hh:mm' }} </h5>
+                                                <div class="city"><small>City:&nbsp;</small><small>{{name}}</small></div>
+                                                <div> <img src="http://openweathermap.org/img/w/{{values?.list[0].weather[0].icon}}.png"></div>
+                                                <div class="temp">{{values?.list[0].main.temp|number : '1.0-0'}}&#8451;</div>
+                                       
+
+                                    <div class="wind">
+                                        <h6>WIND:{{values?.list[0].wind.speed}}km/h</h6>
+                                    </div>
+                                    <div class="main">
+                                        <h6>HUMIDITY:{{values?.list[0].main.humidity}}%</h6>
+                                    </div>
+                                    <div>&nbsp;</div>
+                                </div>
+                                <div class="icon">
+                                    <span class="wi-day-sunny"></span>
+                                </div>
+                            </ion-card>
+                            </div>
+                            <div class="future">
+                                <div class="day">
+                                    <h3> {{values?.list[8].dt_txt|date:'EEEE'}}</h3>
+                                    <div><img src="http://openweathermap.org/img/w/{{values?.list[8].weather[0].icon}}.png"></div>
+                                    <div class="temp">{{values?.list[8].main.temp|number : '1.0-0'}}&#8451;</div>
+                                   
+                                </div>
+                                <div class="day">
+                                    <h3> {{values?.list[16].dt_txt|date:'EEEE'}} </h3>
+                                    <div><img src="http://openweathermap.org/img/w/{{values?.list[16].weather[0].icon}}.png"></div>
+                                    <div class="temp">{{values?.list[16].main.temp|number : '1.0-0'}}&#8451;</div>
+    
+                                </div>
+                                <div class="day">
+                                    <h3> {{values?.list[24].dt_txt|date:'EEEE'}} </h3>
+                                    <div><img src="http://openweathermap.org/img/w/{{values?.list[24].weather[0].icon}}.png"></div>
+                                    <div class="temp">{{values?.list[24].main.temp|number : '1.0-0'}}&#8451;</div>
+
+
+                                <!-- </div>
+                                    <div class="day">
+                                        <h3> {{values?.list[32].dt_txt|date:'EEEE'}} </h3>
+                                        <div><img src="http://openweathermap.org/img/w/{{values?.list[24].weather[0].icon}}.png"></div>
+                                        <div class="temp">{{values?.list[32].main.temp|number : '1.0-0'}}&#8451;</div>
+                                    </div>
+
+                                        <div class="day">
+                                            <h3> {{values?.list[40].dt_txt|date:'EEEE'}} </h3>
+                                            <div><img src="http://openweathermap.org/img/w/{{values?.list[24].weather[0].icon}}.png"></div>
+                                            <div class="temp">{{values?.list[40].main.temp|number : '1.0-0'}}&#8451;</div>
+                                        </div>
+
+                                            <div class="day">
+                                                <h3> {{values?.list[48].dt_txt|date:'EEEE'}} </h3>
+                                                <div><img src="http://openweathermap.org/img/w/{{values?.list[24].weather[0].icon}}.png"></div>
+                                                <div class="temp">{{values?.list[48].main.temp|number : '1.0-0'}}&#8451;</div>
+                                            </div> -->
+
+
+
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>            
+        </ion-content>
+    </body>
